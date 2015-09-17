@@ -6,6 +6,14 @@ Git是免费开源软件。
 git config --global user.name "谭映宇"
 git config --global user.email "tanyingyu@163.com"
 
+# 必须学会的命令
+随时掌握工作区的状态。
+git status
+查看commit的日志。
+git log
+查看所有操作的日志，包含reset和commit操作。
+git reflog
+
 # 基本用法
 git add ［files］
 git commit -m '备注信息'
