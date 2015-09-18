@@ -40,7 +40,19 @@ Git是免费开源软件。
 >cat ~/.ssh/id_rsa.pub|pbcopy
 
 ## 创建远程库
+在github上建名为notes的库。notes这个名字你可以自己定。
 
-
-
+## 关联本地库与github远程库
+### 关联
+>git remote add ghhttps https://github.com/tanyingyu/notes.git
+或
+>git remote add ghssh git@github.com:tanyingyu/notes.git
+#### 查看remote库
+>git remote －v
+#### 删除remote库
+>git remote remove ghhttps
+### 第一次推送
+>git push -u ghssh master
+### 日常推送
+>git push ghssh master
 
