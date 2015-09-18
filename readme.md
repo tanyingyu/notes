@@ -51,9 +51,9 @@ Git是免费开源软件。
 >git remote －v  
 #### 删除remote库  
 >git remote remove ghhttps  
-### 第一次推送  
+### 第一次推送,推送当前branch到ghssh/master分支。    
 >git push -u ghssh master  
-### 日常推送  
+### 日常推送，推送当前branch到ghssh/master分支。  
 >git push ghssh master  
 
 ## 克隆远程库
@@ -62,7 +62,7 @@ Git是免费开源软件。
 
 # 分支
 ## 查看分支  
->git branch  
+>git branch -a
 ## 创建并切换分支  
 >git checkout -b branch  
 ## 切换分支  
