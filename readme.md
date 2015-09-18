@@ -60,3 +60,13 @@ Git是免费开源软件。
 在一个全新的目录中。
 >git clone git@github.com:tanyingyu/notes.git  
 
+# 分支
+## 查看分支  
+>git branch  
+## 创建并切换分支  
+>git checkout -b branch  
+## 切换分支  
+>git checkout master  
+## 合并分支  
+将dev分支合并入当前分支  
+>git merge dev
