@@ -3,7 +3,7 @@ Git是一种版本控制系统。
 Git是免费开源软件。
 
 # Git作者设置
->git config --global user.name "谭映宇"
+>git config --global user.name "谭映宇"  
 >git config --global user.email "tanyingyu@163.com"
 
 # 必须学会的命令
@@ -15,7 +15,7 @@ Git是免费开源软件。
 >git reflog
 
 # 基本用法
->git add ［files］
+>git add [files]  
 >git commit -m '备注信息'
 将版本库最新版本往前推一个版本。相当于最近一次没有提交。工作区没有修改。
 >git reset HEAD^
@@ -42,17 +42,17 @@ Git是免费开源软件。
 ## 创建远程库
 在github上建名为notes的库。notes这个名字你可以自己定。
 
-## 关联本地库与github远程库
-### 关联
->git remote add ghhttps https://github.com/tanyingyu/notes.git
-或
->git remote add ghssh git@github.com:tanyingyu/notes.git
-#### 查看remote库
->git remote －v
-#### 删除remote库
->git remote remove ghhttps
-### 第一次推送
->git push -u ghssh master
-### 日常推送
->git push ghssh master
+## 关联本地库与github远程库  
+### 关联  
+>git remote add ghhttps https://github.com/tanyingyu/notes.git  
+或  
+>git remote add ghssh git@github.com:tanyingyu/notes.git  
+#### 查看remote库  
+>git remote －v  
+#### 删除remote库  
+>git remote remove ghhttps  
+### 第一次推送  
+>git push -u ghssh master  
+### 日常推送  
+>git push ghssh master  
 
