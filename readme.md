@@ -70,3 +70,8 @@ Git是免费开源软件。
 ## 合并分支  
 将dev分支合并入当前分支  
 >git merge dev
+
+## 获取远端分支  
+获取远端分支到本地当前分支。  
+>git pull ghssh dev
+
