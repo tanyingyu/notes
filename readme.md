@@ -62,14 +62,18 @@ Git是免费开源软件。
 
 # 分支
 ## 查看分支  
->git branch -a
+>git branch -a  
+## 创建分支  
+>git branch <branch_name>  
 ## 创建并切换分支  
->git checkout -b branch  
+>git checkout -b <branch_name>    
 ## 切换分支  
->git checkout master  
+>git checkout <branch_name>  
 ## 合并分支  
 将dev分支合并入当前分支  
->git merge dev
+>git merge <branch_name>  
+## 删除分支
+git branch -d <branch_name>
 
 ## 获取远端分支  
 获取远端分支到本地当前分支。  
