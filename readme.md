@@ -8,9 +8,9 @@ Git是免费开源软件。
 
 # 必须学会的命令
 随时掌握工作区的状态。
->git status
-查看commit的日志。
->git log
+>git status  
+查看commit的日志。  
+>git log  
 查看所有操作的日志，包含reset和commit操作。
 >git reflog
 
@@ -55,4 +55,8 @@ Git是免费开源软件。
 >git push -u ghssh master  
 ### 日常推送  
 >git push ghssh master  
+
+## 克隆远程库
+在一个全新的目录中。
+>git clone git@github.com:tanyingyu/notes.git  
 
