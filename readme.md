@@ -91,11 +91,11 @@ Git是一种版本控制系统。Git是免费开源软件。
 在github上建名为notes的库。notes这个名字你可以自己定。
 
 ## 关联本地库与github远程库
-### 使用https关联，无写入权限。（由于https没有写入方式）
+### 使用https关联，无写入权限。（由于https写入需要每次使用用户和密码）
 
     git remote add ghhttps https://github.com/tanyingyu/notes.git
 
-### 使用ssh关联。
+### 使用ssh关联。（使用公钥密钥机制，无需输入用户和密码）
 
     git remote add ghssh git@github.com:tanyingyu/notes.git
 
