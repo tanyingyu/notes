@@ -3,21 +3,51 @@ Git是一种版本控制系统。
 Git是免费开源软件。
 
 # Git作者设置
->git config --global user.name "谭映宇"  
->git config --global user.email "tanyingyu@163.com"
+
+>git config --global user.name "谭映宇"
+ git config --global user.email "tanyingyu@163.com"
 
 # 必须学会的命令
+
 随时掌握工作区的状态。
+
 >git status  
+
 查看commit的日志。  
+
 >git log  
+
 查看所有操作的日志，包含reset和commit操作。
+
 >git reflog
 
 # 基本用法
->git add [files]  
+
+将工作区文件添加到stage暂存区。
+
+>git add [files]
+
+提交并写提交备注。
+
 >git commit -m '备注信息'
-将版本库最新版本往前推一个版本。相当于最近一次没有提交。工作区没有修改。
+
+订正最近一次的提交。
+
+>git commit --amend
+
+比如：
+
+刚才我做了修改，并且提交了。但马上发现提交的数据不全，或其他问题。我们可以马上订正提交。
+
+>git commit -m '提价一次'
+
+发现有问题，即刻订正。如‘提交’错写成了‘提价’。
+>git commit --amend -m '提交一次。'
+
+当然，你也可以，add一些文件后，在amend提交。相当于上次忘提交了一些东西。
+
+将版本库最新版本往前推一个版本。HEAD ref往前移动。工作区没有修改。
+
 >git reset HEAD^
 相当于git reset --mix HEAD^
 
@@ -77,5 +107,8 @@ git branch -d <branch_name>
 
 ## 获取远端分支  
 获取远端分支到本地当前分支。  
->git pull ghssh dev
+>git pull ghssh dev  
+
+## 解决冲突
+
 
