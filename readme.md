@@ -1,6 +1,7 @@
 # Git简介
 Git是一种版本控制系统。
-
+[官网](http://git-scm.com)
+[pro git book](http://git-scm.com/book/zh/v2)
 Git是免费开源软件。
 
 # Git作者设置
@@ -60,6 +61,8 @@ Git是免费开源软件。
 
     git reset --hard commit_id 
 
+`使用git reset一定要*非常小心*，因为会清除工作区的修改。该操作不可逆。`
+
 将版本库中最新版的文件checkout到工作区
 
     git checkout -- [files]
@@ -68,8 +71,7 @@ Git是免费开源软件。
 ## 注册github账号
 
 ## 创建SSH Key
-
-[github文档](https://help.github.com/articles/generating-ssh-keys/）
+[官方文档](https://help.github.com/articles/generating-ssh-keys/) 
 
     ssh-keygen -t rsa -C "tanyingyu@163.com"
 
