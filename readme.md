@@ -3,11 +3,9 @@ Git是一种版本控制系统。Git是免费开源软件。
 
 推荐网站：
 * [官网](http://git-scm.com)
+
 推荐书籍：
-
 * [pro git](http://git-scm.com/book/zh/v2)
-
-
 
 # Git作者设置
 
