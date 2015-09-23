@@ -5,10 +5,6 @@ Git是免费开源软件。
 # Git作者设置
 
 >git config --global user.name "谭映宇"
-<<<<<<< HEAD
-=======
-
->>>>>>> 5c14aef0e0be41243b84e301a4c754ef6a8993aa
  git config --global user.email "tanyingyu@163.com"
 
 # 必须学会的命令
