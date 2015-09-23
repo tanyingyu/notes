@@ -15,6 +15,7 @@ Git是免费开源软件。
     git status
 
 查看commit的日志。
+
     git log
 
 查看所有操作的日志，包含reset和commit操作。
@@ -70,7 +71,7 @@ Git是免费开源软件。
 
 [github文档](https://help.github.com/articles/generating-ssh-keys/）
 
-    ssh-keygen -t rsa -C "tanyingyu@163"
+    ssh-keygen -t rsa -C "tanyingyu@163.com"
 
 在用户主目录~/.ssh目录中有id_rsa和id_rsa.pub两个文件，id_rsa是私钥，id_rsa.pub是公钥。公钥需要上传到github服务器。
 
@@ -138,6 +139,7 @@ Git是免费开源软件。
 
 ## 获取远端分支
 获取远端分支到本地当前分支。
+
     git pull ghssh dev
 
 ## 解决冲突
