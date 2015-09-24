@@ -108,8 +108,7 @@ git reset [--soft --mixed | --hard | --merge | --keep] [-q] [<commit>]
 ```
 
 * 第一种用法（`包含了路径<paths>的用法`）不会重置引用，更不会改变工作区，而是用指定提交状态(<commit>)下的文件(<paths>)替换掉暂存区中的文件。  
-`一般用途`：git reset HEAD <paths>取消之前执行的git add <paths>命令。  
-
+`一般用途`：git reset HEAD <paths>取消之前执行的git add <paths>命令。
 > 注意：  
 > 在命令中包含路径<paths>。为了避免路径和引用（或者提交ID）同名而发生冲突，可以在<paths>
 > 前用两个连续的短线（减号）作为做分隔。也就是说同时使用<commit>和<paths>的时候用'--'分割。
