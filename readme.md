@@ -77,9 +77,9 @@ git add .
 git commit -m '备注信息'
 ```
 
-订正最近一次的提交。
+增补提交，订正最近一次的提交。`**只能针对最后一个提交**`。
 ```Bash
-git commit --amend
+git commit --amend -m '备注信息'
 ```
 比如：
 
@@ -94,6 +94,8 @@ git commit --amend -m '提交一次。'
 ```
 当然，你也可以，add一些文件后，在amend提交。相当于上次忘提交了一些东西。
 
+
+## 恢复
 将版本库最新版本往前推一个版本。HEAD ref往前移动。工作区没有修改。
 
     git reset HEAD^
