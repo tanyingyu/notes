@@ -7,15 +7,19 @@ Git是一种版本控制系统。Git是免费开源软件。
 推荐书籍：
 * [pro git](http://git-scm.com/book/zh/v2)
 
-# 全局变量
-## Git作者设置
+# 全局环境设定
+## 作者设置
 
 ```Bash
 git config --global user.name "谭映宇"
 git config --global user.email "tanyingyu@163.com"
 ```
 
-##
+## 界面设置
+设置git终端界面为彩色显示。
+```Bash
+git config --global color.ui true
+```
 
 # 必须学会的命令
 
