@@ -9,33 +9,32 @@ Git是一种版本控制系统。Git是免费开源软件。
 
 # 全局环境设定
 ## 作者设置
-
 ```Bash
 git config --global user.name "谭映宇"
 git config --global user.email "tanyingyu@163.com"
 ```
-
 ## 界面设置
 设置git终端界面为彩色显示。
 ```Bash
 git config --global color.ui true
 ```
-
 # 必须学会的命令
-
+## 状态类命令
 随时掌握工作区的状态。
-
-    git status
-
+```Bash
+git status
+```
 查看commit的日志。
-
-    git log
-
+```Bash
+git log
+```
 查看所有操作的日志，包含reset和commit操作。
 
     git reflog
 
 # 基本用法
+
+## 
 
 将工作区文件添加到stage暂存区。
 
