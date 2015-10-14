@@ -18,6 +18,10 @@ Git是一种版本控制系统。Git是免费开源软件。
 * [pro git](http://git-scm.com/book/zh/v2)
 
 # 全局环境设定
+## 查看环境设置
+```bash
+git config --list
+```
 ## 作者设置
 ```Bash
 git config --global user.name "谭映宇"
@@ -27,6 +31,10 @@ git config --global user.email "tanyingyu@163.com"
 设置git终端界面为彩色显示。
 ```Bash
 git config --global color.ui true
+```
+## 使用HTTP代理
+```bash
+git config --global http.proxy "<HTTP代理>"
 ```
 # 必须学会的命令
 ## 状态类命令
@@ -289,7 +297,29 @@ git diff HEAD^
 git diff <remote_name>/<remote_branch_name>..<branch_name>                    
 ```
 
-## 归档
+## 打包或归档
+### 基于分支或标签打包
+```bash
+#使用tar.gz打包
+git archive --prefix=XXX/ -o XXX.tar.gz <branch_name或tag_name> 
+#使用zip打包
+git archive -o ../XXX.zip <branch_name或tag_name> 
+```
+### 制作补丁
+```bash
+#导出两次提交之间修改过的文件
+git archive -o ../latest.patch.v1.1-v.1.0.zip v1.1 $(git diff --name-only v1.0 v1.1)
+
+#最后一次提交的补丁
+git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
+```
+
+# 使用子模块
+[Git Pro][git_pro_book]
+[git pro](http://git-scm.com/book/zh/v2/Git-工具-子模块 "Git-工具-子模块")
+
+```bash
+```
 
 # Github
 ## 注册github账号
@@ -348,3 +378,6 @@ git clone git@github.com:tanyingyu/notes.git
 ```
 
 ## 解决冲突
+
+# 参考资料
+[git_pro_book]:http://git-scm.com/book/zh/v2 "http://git-scm.com/book/zh/v2"
