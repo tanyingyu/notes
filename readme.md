@@ -252,6 +252,9 @@ https写入（push）需要每次使用用户和密码。
     git merge <branch_name>
 将dev分支合并入当前分支
 
+### 重命名分支
+    git branch -m <org_branch_name> <new_branch_name>
+
 ### 删除分支
     git branch -d <branch_name>
 
@@ -270,6 +273,8 @@ https写入（push）需要每次使用用户和密码。
 ## 本地tag
 ### 删除本地tag
     git tag -d <tag_name>
+### 获取远端tag
+    git fetch origin tag <tag_name>
 
 ## 远端tag
 ### 推送本地tag到远端
