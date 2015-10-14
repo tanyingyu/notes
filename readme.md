@@ -324,9 +324,15 @@ git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
 2. 藏匿工作区
 3. 查看状态
 4. 处理急需要的问题
-5. 
+5. 查看藏匿区列表
+6. 恢复藏匿工作区
 ```bash
-
+git status -s
+git stash
+git status
+#...处理麻烦事
+git stash list
+git pop
 ```
 ## 使用子模块
 [git pro](http://git-scm.com/book/zh/v2/Git-工具-子模块 "Git-工具-子模块")
