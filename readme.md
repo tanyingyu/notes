@@ -315,7 +315,6 @@ git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
 ```
 
 # 使用子模块
-[Git Pro][git_pro_book]
 [git pro](http://git-scm.com/book/zh/v2/Git-工具-子模块 "Git-工具-子模块")
 
 ```bash
@@ -380,4 +379,5 @@ git clone git@github.com:tanyingyu/notes.git
 ## 解决冲突
 
 # 参考资料
+[Git Pro][git_pro_book]
 [git_pro_book]:http://git-scm.com/book/zh/v2 "http://git-scm.com/book/zh/v2"
