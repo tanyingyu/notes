@@ -265,7 +265,10 @@ git diff
 ```bash
 git diff --cached
 ```
-
+#### 当前分支与其他版本之间的差异
+```bash
+git diff HEAD^
+```
 ## 归档
 
 # Github
