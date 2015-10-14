@@ -123,6 +123,12 @@ git commit --amend -m '提交一次。'
 当然，你也可以，add一些文件后，在amend提交。相当于上次忘提交了一些东西。
 
 ### 反转提交
+反转已经提交的改动，使用`git revert`命令，此命令通过在版本库中创建一个“反向的”新提交来抵消原来提交的改动，执行revert命令时要求`工作区必须是干净`的.
+通常Git会立即提交反转结果，但是也可以通过参数-n告诉Git先不要提交，这用于反转多个提交非常有用，运行多个`git revert –n`命令，Git会暂存所有的变更，然后做一次性提交。做反转操作的时候必须提供提交名称，反转总是按照从新到旧点的倒序来操作的，即最后的提交最先反转，这样可以避免一些不必要的冲突。
+```Bash
+git revert c011eb3
+```
+
 
 ### 复位操作
 reset是Git最常用命令之一，同时也最危险最容易误用的命令。所以要好好理解其工作机理。错误使用的最大问题：暂时丢失**工作区**的修改数据，为什么是暂时了？理解机理后，我相信你即使用错，也可以修复。呵呵！
@@ -228,34 +234,60 @@ https写入（push）需要每次使用用户和密码。
 
 # 分支
 
-## 查看分支
+## 本地分支
 
+### 查看分支
     git branch -a
 
-## 创建分支
+### 创建分支
+    git branch <branch_name>
 
-    branch <<branch_name></branch_name>
+### 切换分支
+    git checkout </branch_name>
 
-## 创建并切换分支
-    checkout -b <<branch_name></branch_name>
+### 创建并切换分支
+    git checkout -b <branch_name>
 
-## 切换分支
-    checkout <<branch_name></branch_name>
-
-## 合并分支
+### 合并分支
+    git merge <branch_name>
 将dev分支合并入当前分支
 
-    merge <<branch_name></branch_name>
+### 删除分支
+    git branch -d <branch_name>
 
-## 删除分支
-
-    git branch -d <<branch_></branch_>
-
-## 获取远端分支
+## 远端分支
+### 获取远端分支
+    git pull ghssh dev
 获取远端分支到本地当前分支。
 
-    git pull ghssh dev
+### 删除远端分支
+    git push <remote_name> --detete <branch_name>
+
 
 ## 解决冲突
 
+# tag管理
+## 本地tag
+### 删除本地tag
+    git tag -d <tag_name>
 
+## 远端tag
+### 推送本地tag到远端
+推送全部本地tag到远端
+
+    git push --tags
+推送某个本地tag到远端
+
+    git push <remote_name> refs/tags/<tag_name>
+
+### 删除远端tag
+    git push <remote_name> :refs/tags/<tag_name>
+或
+
+    git push <remote_name> --detete tag <tag_name>
+
+
+
+
+
+## 创建
