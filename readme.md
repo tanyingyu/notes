@@ -208,7 +208,19 @@ git branch -m <org_branch_name> <new_branch_name>
 git branch -d <branch_name>
 ```
 ### 远端分支
+#### 查看远端分支
+```bash
+git branch -r
+```
 #### 获取远端分支
+```bash
+#获取指定分支  
+git fetch <remote_name> <remote_branch_name>
+#获取所有分支
+git fetch <remote_name>
+```
+
+#### 获取并合并远端分支
 ```Bash
 git pull ghssh dev
 ```
@@ -218,6 +230,8 @@ git pull ghssh dev
 ```Bash
 git push <remote_name> --detete <branch_name>
 ```
+
+
 ## tag标签操作
 #### 显示本地tag列表
 ```bash
@@ -237,7 +251,7 @@ git tag -d <tag_name>
 ```
 #### 获取远端tag
 ```Bash
-git fetch origin tag <tag_name>
+git fetch <remote_name> tag <tag_name>
 ```
 ### 远端tag
 #### 推送本地tag到远端
@@ -247,7 +261,7 @@ git push --tags
 ```
 推送某个本地tag到远端
 ```Bash
-git push <remote_name> refs/tags/<tag_name>
+git push <remote_name> <tag_name>
 ```
 #### 删除远端tag
 ```Bash
@@ -273,6 +287,7 @@ git diff HEAD^
 ```bash
 git diff <remote_name>/<remote_branch_name>..<branch_name>                    
 ```
+
 ## 归档
 
 # Github
