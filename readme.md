@@ -175,30 +175,94 @@ git reset --mixed HEAD^
 git reset --hard HEAD^ 
 ```
 
-## 本地版本库操作
-### 分支
-将版本库中最新版的文件checkout到工作区
-    git checkout -- [files]
-### 标签
+## 分支操作
+### 本地分支
+#### 查看分支
+```Bash
+git branch -a
+```
+#### 创建分支
+```Bash
+git branch <branch_name>
+```
+#### 切换分支
+```Bash
+git checkout </branch_name>
+```
+#### 创建并切换分支
+```Bash
+git checkout -b <branch_name>
+```
+#### 合并分支
+```Bash
+git merge <branch_name>
+```
+将dev分支合并入当前分支
+#### 重命名分支
+```Bash
+git branch -m <org_branch_name> <new_branch_name>
+```
 
-### 归档
+#### 删除分支
+```Bash
+git branch -d <branch_name>
+```
+### 远端分支
+#### 获取远端分支
+```Bash
+git pull ghssh dev
+```
+获取远端分支到本地当前分支。
+
+#### 删除远端分支
+```Bash
+git push <remote_name> --detete <branch_name>
+```
+## tag标签操作
+### 本地tag
+#### 删除本地tag
+```Bash
+git tag -d <tag_name>
+```
+#### 获取远端tag
+```Bash
+git fetch origin tag <tag_name>
+```
+### 远端tag
+#### 推送本地tag到远端
+推送全部本地tag到远端
+```Bash
+git push --tags
+```
+推送某个本地tag到远端
+```Bash
+git push <remote_name> refs/tags/<tag_name>
+```
+#### 删除远端tag
+```Bash
+git push <remote_name> :refs/tags/<tag_name>
+#或
+git push <remote_name> --detete tag <tag_name>
+```
+
+## 归档
 
 # Github
 ## 注册github账号
 
 ## 创建SSH Key
 [官方文档](https://help.github.com/articles/generating-ssh-keys/) 
-
-    ssh-keygen -t rsa -C "tanyingyu@163.com"
-
+```Bash
+ssh-keygen -t rsa -C "tanyingyu@163.com"
+```
 在用户主目录~/.ssh目录中有id_rsa和id_rsa.pub两个文件，id_rsa是私钥，id_rsa.pub是公钥。公钥需要上传到github服务器。
 
 ## 上传SSH public Key
 
 登陆GitHub，打开“Account settings”，“SSH Keys”页面。然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容。
-
-    cat ~/.ssh/id_rsa.pub|pbcopy
-
+```Bash
+cat ~/.ssh/id_rsa.pub|pbcopy
+```
 ## 创建远程库
 
 在github上建名为notes的库。notes这个名字你可以自己定。
@@ -207,92 +271,36 @@ git reset --hard HEAD^
 ### 使用https关联
 https写入（push）需要每次使用用户和密码。
 
-    git remote add ghhttps https://github.com/tanyingyu/notes.git
-
+```Bash
+git remote add ghhttps https://github.com/tanyingyu/notes.git
+```
 ### 使用ssh关联
 使用公钥密钥机制，无需输入用户和密码。
 
-    git remote add ghssh git@github.com:tanyingyu/notes.git
-
+```Bash
+git remote add ghssh git@github.com:tanyingyu/notes.git
+```
 #### 查看remote库
-    git remote －v
-
+```Bash
+git remote －v
+```
 #### 删除remote库
-    git remote remove ghhttps
-
+```Bash
+git remote remove ghhttps
+```
 ### 第一次推送,推送当前branch到ghssh/master分支。
-    git push -u ghssh master
-
+```Bash
+git push -u ghssh master
+```
 ### 日常推送，推送当前branch到ghssh/master分支。
-    git push ghssh master
-
+```Bash
+git push ghssh master
+```
 ## 克隆远程库
 
 在一个全新的目录中。
-
-    git clone git@github.com:tanyingyu/notes.git
-
-# 分支
-
-## 本地分支
-
-### 查看分支
-    git branch -a
-
-### 创建分支
-    git branch <branch_name>
-
-### 切换分支
-    git checkout </branch_name>
-
-### 创建并切换分支
-    git checkout -b <branch_name>
-
-### 合并分支
-    git merge <branch_name>
-将dev分支合并入当前分支
-
-### 重命名分支
-    git branch -m <org_branch_name> <new_branch_name>
-
-### 删除分支
-    git branch -d <branch_name>
-
-## 远端分支
-### 获取远端分支
-    git pull ghssh dev
-获取远端分支到本地当前分支。
-
-### 删除远端分支
-    git push <remote_name> --detete <branch_name>
-
+```Bash
+git clone git@github.com:tanyingyu/notes.git
+```
 
 ## 解决冲突
-
-# tag管理
-## 本地tag
-### 删除本地tag
-    git tag -d <tag_name>
-### 获取远端tag
-    git fetch origin tag <tag_name>
-
-## 远端tag
-### 推送本地tag到远端
-推送全部本地tag到远端
-
-    git push --tags
-推送某个本地tag到远端
-
-    git push <remote_name> refs/tags/<tag_name>
-
-### 删除远端tag
-    git push <remote_name> :refs/tags/<tag_name>
-或
-
-    git push <remote_name> --detete tag <tag_name>
-
-
-
-
-
-## 创建
