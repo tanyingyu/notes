@@ -269,6 +269,10 @@ git diff --cached
 ```bash
 git diff HEAD^
 ```
+#### 远程版本库与本地版本库的差异
+```bash
+git diff origin/master..master                            
+```
 ## 归档
 
 # Github
