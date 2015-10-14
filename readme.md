@@ -314,7 +314,21 @@ git archive -o ../latest.patch.v1.1-v.1.0.zip v1.1 $(git diff --name-only v1.0 v
 git archive -o ../updated.zip HEAD $(git diff --name-only HEAD^)
 ```
 
-# 使用子模块
+# 高级功能
+## 藏匿工作区
+假设正在修改一些代码，但是工作尚未取得阶段性的提交时机，突然有一个你必须放下你现在的工作而去处理的麻烦。这时你不能提交你的部分代码，也不能扔掉你的变化。所以，你需要一些临时空间，在那里你可以存储部分修改，以便以后再提交。
+
+工作流程：
+
+1. 查看状态
+2. 藏匿工作区
+3. 查看状态
+4. 处理急需要的问题
+5. 
+```bash
+
+```
+## 使用子模块
 [git pro](http://git-scm.com/book/zh/v2/Git-工具-子模块 "Git-工具-子模块")
 
 ```bash
