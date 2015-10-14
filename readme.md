@@ -271,7 +271,7 @@ git diff HEAD^
 ```
 #### 远程版本库与本地版本库的差异
 ```bash
-git diff origin/master..master                            
+git diff <remote_name>/<remote_branch_name>..<branch_name>                    
 ```
 ## 归档
 
