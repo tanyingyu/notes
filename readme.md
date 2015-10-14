@@ -187,7 +187,7 @@ git branch <branch_name>
 ```
 #### 切换分支
 ```Bash
-git checkout </branch_name>
+git checkout <branch_name>
 ```
 #### 创建并切换分支
 ```Bash
@@ -219,7 +219,18 @@ git pull ghssh dev
 git push <remote_name> --detete <branch_name>
 ```
 ## tag标签操作
-### 本地tag
+#### 显示本地tag列表
+```bash
+git tag
+```
+#### 显示某个tag信息
+```bash
+git show <tag_name>
+```
+#### 新增本地tag
+```bash
+git tag -a <tag_name> -m '备注信息'
+```
 #### 删除本地tag
 ```Bash
 git tag -d <tag_name>
@@ -243,6 +254,16 @@ git push <remote_name> refs/tags/<tag_name>
 git push <remote_name> :refs/tags/<tag_name>
 #或
 git push <remote_name> --detete tag <tag_name>
+```
+
+## 差异比较
+#### 工作区与暂存区
+```bash
+git diff
+```
+#### 暂存区与本地版本库
+```bash
+git diff --cached
 ```
 
 ## 归档
