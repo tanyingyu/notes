@@ -379,5 +379,5 @@ git clone git@github.com:tanyingyu/notes.git
 ## 解决冲突
 
 # 参考资料
-[Git Pro][git_pro_book]
+[Pro Git, Second Edition][git_pro_book]
 [git_pro_book]:http://git-scm.com/book/zh/v2 "http://git-scm.com/book/zh/v2"
